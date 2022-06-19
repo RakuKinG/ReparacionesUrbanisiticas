@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mi_grafo"
+    app:startDestination="@id/portadaFragment">
+    <fragment
+        android:id="@+id/portadaFragment"
+        android:name="iestr.gag.grafo6.PortadaFragment"
+        android:label="Reparaciones ubranisticas"
+        tools:layout="@layout/fragment_portada" >
+        <action
+            android:id="@+id/action_portadaFragment_to_detalles"
+            app:destination="@id/detalles" />
+    </fragment>
+    <fragment
+        android:id="@+id/ajustesFragment"
+        android:name="iestr.gag.grafo6.AjustesFragment"
+        android:label="Ajustes"
+        tools:layout="@layout/fragment_ajustes" />
+    <fragment
+        android:id="@+id/creditosFragment"
+        android:name="iestr.gag.grafo6.CreditosFragment"
+        android:label="Creditos"
+        tools:layout="@layout/fragment_creditos" />
+    <fragment
+        android:id="@+id/ayudaFragment"
+        android:name="iestr.gag.grafo6.AyudaFragment"
+        android:label="Ayuda"
+        tools:layout="@layout/fragment_ayuda" />
+    <fragment
+        android:id="@+id/detalles"
+        android:name="iestr.gag.grafo6.Detalles"
+        android:label="Detalle de la incidencia"
+        tools:layout="@layout/fragment_detalles" >
+        <action
+            android:id="@+id/action_detalles_to_maps"
+            app:destination="@id/maps" />
+        <argument android:name="dni_usuario"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_detalles_to_portadaFragment"
+            app:destination="@id/portadaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/maps"
+        android:name="iestr.gag.grafo6.MapsFragment"
+        android:label="Maps"
+        tools:layout="@layout/fragment_maps" />
+</navigation>
