@@ -76,9 +76,10 @@ class Detalles : Fragment() {
                 findNavController().navigate(R.id.action_detalles_to_portadaFragment)
         }
 
+
+    }
         enlace.imageButton.setOnClickListener{
-                findNavController().navigate(R.id.action_detalles_to_maps)
-            }
+            findNavController().navigate(R.id.action_detalles_to_maps)
         }
     }
 
